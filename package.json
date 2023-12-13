@@ -4,7 +4,8 @@
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "commitlint.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,13 @@
   "homepage": "https://github.com/CloudSystemCommunity/workshop-landing#readme",
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
-    "@commitlint/config-conventional": "^18.4.3"
+    "@commitlint/config-conventional": "^18.4.3",
+    "git-format-staged": "^3.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "3.1.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
